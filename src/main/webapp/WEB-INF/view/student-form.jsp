@@ -20,8 +20,20 @@
 
     <br><br>
 
-    <input type="submit" value="Submit!"/>
+    Country: <form:select path="country">
 
+    <%--    <form:option value="Brazilian" label="Brazil"/>--%>
+    <%--    <form:option value="French" label="France"/>--%>
+    <%--    <form:option value="German" label="Germany"/>--%>
+    <%--    <form:option value="Indian" label="India"/>--%>
+    <form:options items="${student.countryOptions}"/>
+
+
+</form:select>
+
+    <br><br>
+
+    <input type="submit" value="Submit!"/>
 
 </form:form>
 
