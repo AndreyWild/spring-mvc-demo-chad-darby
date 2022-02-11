@@ -8,5 +8,7 @@
 <a href="funny/showForm">Hello Funny World form</a>
 <br><br>
 <a href="student/showForm">Students Registration Form</a>
+<br><br>
+<a href="customer/showForm">Customer Registration Form</a>
 </body>
 </html>
