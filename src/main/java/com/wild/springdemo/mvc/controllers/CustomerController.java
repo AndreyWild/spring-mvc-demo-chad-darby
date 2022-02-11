@@ -21,7 +21,7 @@ public class CustomerController {
     // remove leading and trailing whitespace
     // resolve issue for our validation
     @InitBinder
-    public void initBinder(WebDataBinder dataBinder){
+    public void initBinder(WebDataBinder dataBinder) {
 
         StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true); // trims all spaces
 
@@ -42,6 +42,10 @@ public class CustomerController {
             BindingResult theBindingResult) {
 
         System.out.println("Last mane: |" + theCustomer.getLastName() + "|");
+
+        System.out.println("Binding result: " + theBindingResult);
+
+        System.out.println("\n\n\n\n");
 
         if (theBindingResult.hasErrors()) {
             return "customer-form";
