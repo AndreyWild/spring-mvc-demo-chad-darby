@@ -21,6 +21,10 @@ Email: ${customer.email}
 
 <br><br>
 
+Course Code: ${customer.courseCode}
+
+<br><br>
+
 <a href="/customer/showForm">Return to Customer Registration Form</a>
 
 </body>

@@ -1,5 +1,7 @@
 package com.wild.springdemo.mvc.models;
 
+import com.wild.springdemo.mvc.validation.annotations.CourseCode;
+
 import javax.validation.constraints.*;
 
 public class Customer {
@@ -20,6 +22,9 @@ public class Customer {
 
     @Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$", message = "email should be in the form: email@gmail.com ")
     private String email;
+
+    @CourseCode(value = "TOPS", message = "must start with TOPS")
+    private String courseCode;
 
     public String getFirstName() {
         return firstName;
@@ -59,5 +64,13 @@ public class Customer {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
     }
 }
